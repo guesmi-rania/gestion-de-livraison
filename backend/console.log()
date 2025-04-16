@@ -1,0 +1,4 @@
+app.post('/deliveries', async (req, res) => {
+  console.log('Reçu livraison:', req.body); // 👈 Ajoute ceci
+  ...
+});
