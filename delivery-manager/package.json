@@ -3,13 +3,13 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://guesmi-rania.github.io/gestion-de-livraison/",  // Remplace ton-utilisateur par ton GitHub username
+  "homepage": "https://guesmi-rania.github.io/gestion-de-livraison/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "predeploy": "npm run build",  // Prépare la build avant de déployer
-    "deploy": "npm run predeploy && gh-pages -d dist"  // Déploie après la build
+    "predeploy": "npm run build",  
+    "deploy": "npm run predeploy && gh-pages -d dist" 
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.4.0",
@@ -22,4 +22,5 @@
     "axios": "^1.8.4",
     "react": "^18.2.0",  
     "react-dom": "^18.2.0"
+  }
 }
