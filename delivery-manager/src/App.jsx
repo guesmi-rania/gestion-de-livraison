@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 // ✅ URL exacte du backend avec /api/deliveries
-const API_URL = "https://gestion-de-livraison.onrender.com/api/deliveries";
+const API_URL = 'https://gestion-de-livraison.onrender.com/api/deliveries';
 
 const App = () => {
   const [deliveries, setDeliveries] = useState([]);
@@ -12,6 +12,7 @@ const App = () => {
     deliveryDate: '',
     status: 'En cours'
   });
+
 
   useEffect(() => {
     axios.get(API_URL)
