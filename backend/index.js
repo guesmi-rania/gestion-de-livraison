@@ -1,19 +1,27 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
-const cors = require('cors');
 const deliveriesRoutes = require('./routes/deliveries');
 const path = require('path');
 
 dotenv.config();
 const mongoURI = process.env.MONGO_URI;
 const app = express();
+const cors = require('cors');
 
-// ✅ CORS autorise tout le frontend (domaine complet)
+// Liste des origines autorisées
+const allowedOrigins = [
+  'https://guesmi-rania.github.io',  // GitHub Pages
+  'https://gestion-de-livraison-frontend.onrender.com'  // Render frontend
+];
+
+// Application de CORS sur les routes
 app.use(cors({
-  origin: 'https://gestion-de-livraison-frontend.onrender.com',
-  credentials: true
+  origin: allowedOrigins, // Autorise les origines spécifiées
+  credentials: true  // Permet les cookies (si nécessaire)
 }));
+
+
 
 app.use(express.json());
 
