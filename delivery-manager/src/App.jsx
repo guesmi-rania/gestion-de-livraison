@@ -45,12 +45,13 @@ const App = () => {
   };
 
   const handleDelete = (id) => {
-    axios.delete(`${API_URL}${id}`)
+    axios.delete(`${API_URL}/${id}`)
       .then(() => {
         setDeliveries(deliveries.filter(delivery => delivery._id !== id));
       })
       .catch(error => console.error("❌ Erreur lors du DELETE :", error));
   };
+  
 
   return (
     <div style={{ padding: '20px', maxWidth: '600px', margin: 'auto' }}>
