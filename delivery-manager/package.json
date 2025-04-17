@@ -8,8 +8,8 @@
     "dev": "vite",
     "build": "vite build && cp -r dist ../backend/public",
     "preview": "vite preview",
-    "predeploy": "npm run build",  
-    "deploy": "npm run predeploy && gh-pages -d dist" 
+    "predeploy": "npm run build",
+    "deploy": "npm run predeploy && gh-pages -d dist"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.4.0",
@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "axios": "^1.8.4",
-    "react": "^18.2.0",  
+    "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }
 }
