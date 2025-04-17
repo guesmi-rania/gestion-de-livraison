@@ -11,7 +11,7 @@ const app = express();
 
 // ✅ CORS autorise tout le frontend (domaine complet)
 app.use(cors({
-  origin: 'https://4173-idx-gestion-de-livraison-1744619201469.cluster-qtqwjj3wgzff6uxtk26wj7fzq6.cloudworkstations.dev',
+  origin: 'https://gestion-de-livraison-frontend.onrender.com',
   credentials: true
 }));
 
