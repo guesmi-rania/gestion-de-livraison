@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+# Ignorer tout sauf les fichiers nécessaires dans dist
+dist/*
+!dist/*.html
+!dist/*.css
+!dist/*.js
