@@ -21,10 +21,11 @@ app.use(express.json());
 app.use('/api/deliveries', deliveriesRoutes);
 
 // Frontend Vite
-app.use(express.static(path.join(__dirname, '../delivery-manager/dist')));
+app.use(express.static(path.join(__dirname, 'public', 'dist')));  // Correct pour public/dist
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../delivery-manager/dist', 'index.html'));
+  res.sendFile(path.join(__dirname, 'public', 'dist', 'index.html'));
 });
+
 
 // DB + Serveur
 mongoose.connect(mongoURI)
